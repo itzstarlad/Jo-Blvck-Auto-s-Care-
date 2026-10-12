@@ -44,7 +44,51 @@
 @media(max-width:540px){.topbar .wrap{font-size:.78rem}.navin{min-height:66px;gap:8px}.brand{gap:7px;flex-shrink:0}.brand img{width:40px;height:40px}.brand span{font-size:.72rem}.brand small{font-size:.6rem}.links{max-width:56vw;gap:14px;font-size:.8rem;overflow-x:auto;scrollbar-width:none}.links::-webkit-scrollbar{display:none}.links a:not(.btn){display:inline-block}.links .btn{font-size:.78rem;padding:9px 10px;flex-shrink:0}.hero h1{font-size:2.8rem}.hero p{font-size:1rem}.section{padding:55px 0}.services{grid-template-columns:1fr}.service{min-height:0}.gallery{grid-template-columns:1fr 1fr;gap:9px}.gallery img{height:155px}.gallery figcaption{font-size:.8rem;padding:9px}.checks{grid-template-columns:1fr}.banner{align-items:flex-start;flex-direction:column;padding:24px}.aboutimg img{height:250px}}
 .faqs{display:grid;gap:12px;max-width:900px}.faqs details{background:#fff;border:1px solid #e2e2e5;border-radius:9px;padding:17px 20px;box-shadow:0 5px 18px #00000006}.faqs details[open]{border-color:var(--red)}.faqs summary{cursor:pointer;font-weight:800;color:#171717}.faqs summary::marker{color:var(--red)}.faqs details p{margin:12px 0 0}.faqs details summary:focus-visible{outline:2px solid var(--red);outline-offset:4px}
 .reviewgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.reviewcard{border:1px solid #e2e2e5;background:#fff;border-radius:10px;padding:22px;box-shadow:0 8px 24px #00000008}.reviewstars{color:var(--red);letter-spacing:.12em;font-size:1.1rem}.reviewcard h3{margin:10px 0 6px}.reviewcard p{margin:0}.quoteform{max-width:850px;display:grid;grid-template-columns:1fr 1fr;gap:16px}.quoteform label{display:grid;gap:7px;color:#222;font-weight:700;font-size:.92rem}.quoteform input,.quoteform select,.quoteform textarea{width:100%;padding:13px 14px;border-radius:7px;border:1px solid #d2d3d7;background:#fff;color:#171717;font:inherit}.quoteform textarea{min-height:125px;resize:vertical}.quoteform .full{grid-column:1/-1}.quoteform input:focus,.quoteform select:focus,.quoteform textarea:focus{outline:2px solid var(--red);border-color:var(--red)}.quotehint{font-size:.85rem;color:#666}@media(max-width:700px){.reviewgrid{grid-template-columns:1fr}.quoteform{grid-template-columns:1fr}.quoteform .full{grid-column:auto}}</style>
-</head>
+<style>\n
+/* Premium JO-BLVCK palette */
+:root{--red:#D71920;--red2:#A90F16;--silver:#EDF0F4;--ink:#111827;--panel:#FFFFFF;--muted:#596474;--blue:#123B67;--blue2:#1B5C96}
+body{background:#fff;color:#111827}
+.topbar{background:#123B67;color:#f8fafc;border-bottom-color:#0d2b4b}
+.topbar a{color:#fff;font-weight:800}
+.nav{background:rgba(255,255,255,.98);border-bottom-color:#d7dde5;box-shadow:0 3px 18px #123b6710}
+.links a:not(.btn):hover{color:#1B5C96}
+.btn{background:#D71920;border-color:#D71920;color:#fff}
+.btn:hover{background:#A90F16;border-color:#A90F16}
+.btn.outline{background:#fff;color:#123B67;border-color:#123B67}
+.btn.outline:hover{background:#123B67;color:#fff;border-color:#123B67}
+.hero{background:linear-gradient(90deg,rgba(255,255,255,.97),rgba(247,249,252,.93) 52%,rgba(237,240,244,.76)),url('workshop-1.jpg') center/cover no-repeat;border-bottom:1px solid #d7dde5}
+.hero:after{border-color:rgba(215,25,32,.14);box-shadow:0 0 0 25px rgba(18,59,103,.035)}
+.eyebrow{color:#1B5C96}
+.hero h1 em,.red{color:#D71920}
+.trust span:before{color:#D71920}
+.section.alt{background:#EDF0F4;border-color:#dce2e9}
+.check{border-left-color:#D71920;background:#EDF0F4;color:#111827}
+.service{border-color:#dce2e9;box-shadow:0 8px 24px #123b6708}
+.service:hover{border-color:#1B5C96;box-shadow:0 12px 28px #123b6715}
+.service-link{color:#1B5C96}
+.gallery figure,.contactcard,.reviewcard{border-color:#dce2e9;box-shadow:0 8px 24px #123b6708}
+.banner{background:linear-gradient(110deg,#123B67,#1B5C96 58%,#D71920)}
+.banner p{color:#f0f5fb}
+.banner .btn{background:#111827;border-color:#111827;color:#fff}
+.contactitem{border-bottom-color:#dce2e9}
+.faqs details{border-color:#dce2e9;box-shadow:0 5px 18px #123b6707}
+.faqs details[open]{border-color:#1B5C96}
+.faqs summary::marker,.reviewstars{color:#D71920}
+.quoteform input,.quoteform select,.quoteform textarea{border-color:#cbd3de}
+.quoteform input:focus,.quoteform select:focus,.quoteform textarea:focus{outline:2px solid #1B5C96;border-color:#1B5C96}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible,summary:focus-visible{outline-color:#1B5C96}
+footer{background:#111827;color:#EDF0F4;border-top:2px solid #123B67}
+.mobile-cta{background:#fff;border-top-color:#dce2e9}
+.mobile-cta a{background:#123B67;color:#fff}
+.mobile-cta a:last-child{background:#D71920;color:#fff}
+.social-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.social-card{display:flex;align-items:center;gap:14px;padding:20px;border:1px solid #dce2e9;border-radius:10px;background:#fff;color:#111827;box-shadow:0 8px 24px #123b6708;transition:transform .2s,border-color .2s}
+.social-card:hover{transform:translateY(-3px);border-color:#1B5C96}
+.social-icon{display:grid;place-items:center;width:48px;height:48px;flex-shrink:0;border-radius:12px;background:#EDF0F4;color:#123B67;font-weight:900;font-size:1.15rem}
+.social-card strong{display:block}
+.social-card small{display:block;color:#596474;overflow-wrap:anywhere}
+@media(max-width:600px){.social-grid{grid-template-columns:1fr}.social-card{padding:16px}}
+\n</style>\n</head>
 <body>
 <a class="skip-link" href="#main-content">Skip to main content</a>
 <div class="topbar"><div class="wrap"><span>📍 Ilaro, Ogun State, Nigeria</span><span>☎ <a href="tel:+2347035249778">0703 524 9778</a> &nbsp; • &nbsp; Professional Auto Care</span></div></div>
@@ -128,7 +172,18 @@
 <div class="contactbuttons"><a class="btn" href="https://wa.me/2347035249778?text=Hello%20Jo-Blvck%20Auto%27s%20Care%2C%20I%20would%20like%20to%20make%20an%20enquiry." target="_blank" rel="noopener">Message on WhatsApp</a><a class="btn outline" href="tel:+2347035249778">Call Now</a></div>
 </div><div class="contactcard"><h3>Let's talk about your car.</h3><p>For faster assistance, include your car make and model, describe the issue you are experiencing, and let us know when you would like to visit.</p><p class="small">Please contact us to confirm availability, pricing and exact workshop directions before travelling. We recommend calling ahead so the team can prepare for your visit.</p><a class="btn outline" href="https://www.google.com/maps/search/?api=1&query=Federal%20University%20of%20Technology%20Ilaro%2C%20Ogun%20State%2C%20Nigeria" target="_blank" rel="noopener">Find the area on Maps ↗</a></div></div>
 </div></section>
-</main>
+
+<section class="section" id="social">
+<div class="wrap">
+<div class="sectionhead"><span class="eyebrow">Stay Connected</span><h2>Follow JO-BLVCK AUTO'S CARE</h2><p>Follow our social pages for automotive content, workshop updates and more. Tap a platform below to connect.</p></div>
+<div class="social-grid">
+<a class="social-card" href="https://www.tiktok.com/@joblvck01" target="_blank" rel="noopener noreferrer" aria-label="Follow JO-BLVCK AUTO'S CARE on TikTok"><span class="social-icon" aria-hidden="true">♪</span><span><strong>TikTok</strong><small>@joblvck01 · Watch our videos ↗</small></span></a>
+<a class="social-card" href="https://www.youtube.com/@jo-blvck01" target="_blank" rel="noopener noreferrer" aria-label="Subscribe to JO-BLVCK AUTO'S CARE on YouTube"><span class="social-icon" aria-hidden="true">▶</span><span><strong>YouTube</strong><small>@jo-blvck01 · Watch and subscribe ↗</small></span></a>
+<a class="social-card" href="https://instagram.com/joblvck01" target="_blank" rel="noopener noreferrer" aria-label="Follow JO-BLVCK AUTO'S CARE on Instagram"><span class="social-icon" aria-hidden="true">◎</span><span><strong>Instagram</strong><small>@joblvck01 · Follow our page ↗</small></span></a>
+</div>
+</div>
+</section>
+\n</main>
 
 <div class="mobile-cta" aria-label="Quick contact options"><a href="tel:+2347035249778">☎ Call Now</a><a href="https://wa.me/2347035249778?text=Hello%20JO-BLVCK%20AUTO%27S%20CARE%2C%20I%20need%20help%20with%20my%20vehicle." target="_blank" rel="noopener">WhatsApp Us ↗</a></div>
 <style>
