@@ -215,4 +215,60 @@ document.getElementById('quoteForm').addEventListener('submit',function(event){
  window.open('https://wa.me/2347035249778?text='+encodeURIComponent(message),'_blank');
 });
 </script>
+
+<!-- JO-BLVCK AUTO'S CARE prepared-answer chatbot; added with owner approval -->
+<style>
+#jb-chat-launcher{position:fixed;right:18px;bottom:88px;z-index:9998;border:0;border-radius:999px;background:#d71920;color:#fff;padding:14px 18px;font-weight:800;box-shadow:0 5px 20px #0003;cursor:pointer}
+#jb-chat-panel{position:fixed;right:16px;bottom:145px;width:min(360px,calc(100vw - 24px));height:460px;max-height:calc(100dvh - 175px);z-index:9999;background:#fff;border:1px solid #ddd;border-radius:16px;box-shadow:0 12px 38px #0004;display:none;overflow:hidden;color:#161616;font-family:Arial,Helvetica,sans-serif}
+#jb-chat-panel.jb-open{display:flex;flex-direction:column}
+#jb-chat-head{background:#111;color:#fff;padding:14px;display:flex;align-items:center;gap:10px}
+#jb-chat-mark{background:#d71920;width:38px;height:38px;display:grid;place-items:center;border-radius:50%;font-size:20px}
+#jb-chat-head strong{font-size:13px;display:block}
+#jb-chat-head small{color:#baf0c5;font-size:11px}
+#jb-chat-close{margin-left:auto;border:0;background:transparent;color:#fff;font-size:25px;cursor:pointer}
+#jb-chat-log{padding:12px;overflow-y:auto;flex:1;background:#fafafa;display:flex;flex-direction:column;gap:9px}
+.jb-bubble{max-width:90%;padding:10px 11px;border-radius:13px;font-size:13px;line-height:1.45;white-space:pre-wrap;overflow-wrap:anywhere}
+.jb-bot{align-self:flex-start;background:#eee;border-bottom-left-radius:4px}
+.jb-user{align-self:flex-end;background:#fae0e0;border-bottom-right-radius:4px}
+#jb-chat-quick{padding:8px 10px 2px;display:flex;gap:6px;flex-wrap:wrap;background:#fff}
+#jb-chat-quick button{border:1px solid #ddd;background:#fff;border-radius:20px;padding:7px 9px;font-size:11px;cursor:pointer}
+#jb-chat-form{display:flex;gap:7px;padding:10px;background:#fff;border-top:1px solid #eee}
+#jb-chat-input{width:100%;min-width:0;border:1px solid #ddd;border-radius:22px;padding:11px;font-size:14px}
+#jb-chat-send{border:0;border-radius:22px;background:#d71920;color:#fff;padding:0 13px;font-weight:700;cursor:pointer}
+#jb-chat-wa{display:block;text-align:center;background:#198754;color:#fff;text-decoration:none;font-size:12px;font-weight:800;padding:11px}
+@media(max-width:480px){#jb-chat-launcher{right:12px;bottom:82px;padding:12px 15px}#jb-chat-panel{right:8px;bottom:136px;width:calc(100vw - 16px);height:440px}}
+</style>
+<button id="jb-chat-launcher" type="button" aria-controls="jb-chat-panel" aria-expanded="false">💬 Chat with us</button>
+<section id="jb-chat-panel" aria-label="JO-BLVCK AUTO'S CARE chat support" aria-hidden="true">
+  <header id="jb-chat-head"><div id="jb-chat-mark">🚗</div><div><strong>JO-BLVCK CHAT SUPPORT</strong><small>Prepared answers · WhatsApp handoff</small></div><button id="jb-chat-close" type="button" aria-label="Close chat">×</button></header>
+  <div id="jb-chat-log" role="log" aria-live="polite"><div class="jb-bubble jb-bot">Welcome to JO-BLVCK AUTO'S CARE! 👋 I can answer common questions about our services and help you contact our team. What would you like to know?</div></div>
+  <div id="jb-chat-quick"><button type="button" data-jb-q="What services do you offer?">Our services</button><button type="button" data-jb-q="Do you travel to customers?">Mobile repairs</button><button type="button" data-jb-q="How can I request a quote?">Request a quote</button><button type="button" data-jb-q="How can I pay?">Payment</button></div>
+  <form id="jb-chat-form"><input id="jb-chat-input" maxlength="500" placeholder="Type your question..." aria-label="Type your question"><button id="jb-chat-send" type="submit">Send</button></form>
+  <a id="jb-chat-wa" target="_blank" rel="noopener noreferrer" href="https://wa.me/2347035249778">Continue on WhatsApp</a>
+</section>
+<script>
+(function(){
+ const launcher=document.getElementById('jb-chat-launcher'),panel=document.getElementById('jb-chat-panel'),close=document.getElementById('jb-chat-close'),log=document.getElementById('jb-chat-log'),form=document.getElementById('jb-chat-form'),input=document.getElementById('jb-chat-input'),wa=document.getElementById('jb-chat-wa');
+ if(!launcher||!panel||!log||!form||!input||!wa)return;
+ function setOpen(open){panel.classList.toggle('jb-open',open);panel.setAttribute('aria-hidden',String(!open));launcher.setAttribute('aria-expanded',String(open));if(open)input.focus();}
+ launcher.addEventListener('click',function(){setOpen(!panel.classList.contains('jb-open'));});close.addEventListener('click',function(){setOpen(false);});
+ const rules=[
+  [['service','offer','what do you do','repair'], "Our listed services include engine diagnostics and repair, oil changes and fluid checks, timing belt replacement, brake system repair, and general check-ups. Tell us your vehicle model and issue for next steps."],
+  [['location','address','where','travel','mobile','service area'], "Our listed address is FEDERAL UNIVERSITY OF TECHNOLOGY ILARO, OGUN STATE. We also travel to customers for repairs throughout Nigeria. Please message us to confirm availability for your location."],
+  [['quote','price','cost','how much','estimate'], "Repair costs depend on your vehicle, symptoms, parts, and inspection. We don't want to guess a price. Send your vehicle make/model and the problem on WhatsApp to request a quote."],
+  [['payment','paystack','pay','transfer','card'], "Our Paystack payment link is https://paystack.shop/pay/jo-blvck-autos-care. Please confirm the amount and payment instructions with JO-BLVCK AUTO'S CARE if unsure. Never share your card PIN or banking password in this chat."],
+  [['book','booking','appointment','schedule'], "To ask about an appointment, message us on WhatsApp with your vehicle model, problem, and preferred day/time. We'll confirm availability directly."],
+  [['phone','call','contact','whatsapp','email'], "Call or WhatsApp 07035249778, or email joblvckautoscare@gmail.com. Use the WhatsApp button below to start a message."],
+  [['brake'], "We provide brake system repair. If your brakes feel unsafe or fail, don't continue driving; arrange safe assistance and contact us."],
+  [['oil','fluid'], "We offer oil changes and fluid checks. The correct oil depends on your vehicle; please share its make, model, and year for guidance."],
+  [['timing belt'], "Timing belt replacement and fixing is one of our listed services. The right parts and process depend on your vehicle. Please send the make, model, year, and engine details on WhatsApp."]
+ ];
+ function bubble(text,kind){const d=document.createElement('div');d.className='jb-bubble '+kind;d.textContent=text;log.appendChild(d);log.scrollTop=log.scrollHeight;}
+ function answer(q){const s=q.toLowerCase();for(const rule of rules){if(rule[0].some(function(k){return s.includes(k);}))return rule[1];}return "I don't have a verified answer for that yet, and I don't want to mislead you. Please contact us on WhatsApp and include your vehicle model and a short description of the problem.";}
+ function ask(q){q=q.trim();if(!q)return;bubble(q,'jb-user');bubble(answer(q),'jb-bot');wa.href='https://wa.me/2347035249778?text='+encodeURIComponent("Hello JO-BLVCK AUTO'S CARE, I used your website chat and need help with: "+q);}
+ form.addEventListener('submit',function(e){e.preventDefault();ask(input.value);input.value='';input.focus();});
+ panel.querySelectorAll('[data-jb-q]').forEach(function(b){b.addEventListener('click',function(){ask(b.getAttribute('data-jb-q'));});});
+})();
+</script>
+
 </body></html>
